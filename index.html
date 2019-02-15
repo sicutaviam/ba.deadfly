@@ -29,6 +29,10 @@
 	var scene = new BABYLON.Scene(engine);
 	
 	var camera = new BABYLON.FollowCamera('cam', new BABYLON.Vector3.Zero(), scene);
+	  camera.heightOffset(10);
+	  camera.rotationOffset(0);
+	  camera.radius(30);
+	  camera.lockedTarget = player;
 	camera.attachControl(canvas, true);
 	var light = new BABYLON.HemisphericLight('light', new BABYLON.Vector3(0, 1, 0), scene);
 	light.intensivity = 0.7;
